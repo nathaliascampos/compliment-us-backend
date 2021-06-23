@@ -105,4 +105,12 @@ yarn add uuid
 
 ``` bash 
 yarn add @types/uuid -D
-```
+```  
+
+---
+
+Usar async no express
+
+``` bash 
+yarn add express-async-errors
+```  
