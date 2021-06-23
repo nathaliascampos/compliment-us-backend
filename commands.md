@@ -53,3 +53,56 @@ yarn add ts-node-dev -D
 ``` bash 
 yarn dev
 ```
+
+---
+
+#### Instalar typeorm  
+
+https://typeorm.io/
+
+``` bash 
+yarn add typeorm reflect-metadata sqlite3
+```
+
+Colocar no script dentro do package.json: 
+
+``` json
+"scripts": {
+    ...
+    "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
+}
+```
+
+Para criar a pasta `migrations`: 
+
+``` bash 
+yarn typeorm migration:create -n CreateUsers
+```
+
+Cria a tabela (visualizar no Beekeeper)
+
+``` bash
+yarn typeorm migration:run 
+```
+
+Se precisar voltar para a última `migration`: 
+
+``` bash
+yarn typeorm migration:revert 
+```
+
+Criar a estrutura de `entities`
+
+``` bash 
+yarn typeorm entity:create -n User
+```
+
+Para criar ID automaticamente
+
+``` bash 
+yarn add uuid 
+```
+
+``` bash 
+yarn add @types/uuid -D
+```
