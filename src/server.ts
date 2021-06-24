@@ -13,6 +13,7 @@ app.use(express.json());
 
 app.use(router);
 
+// Middleware de erro
 app.use((err: Error, request: Request, response: Response, next: NextFunction) => {
 
     if (err instanceof Error) {

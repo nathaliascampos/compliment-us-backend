@@ -114,3 +114,17 @@ Usar async no express
 ``` bash 
 yarn add express-async-errors
 ```  
+
+---
+
+#### Criar tags: 
+``` bash 
+yarn typeorm migration:create -n CreateTags
+``` 
+
+Rodar a migration
+
+``` bash 
+yarn typeorm migration:run
+``` 
+
