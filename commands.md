@@ -128,3 +128,25 @@ Rodar a migration
 yarn typeorm migration:run
 ``` 
 
+#### Instalar JWT 
+
+``` bash
+yarn add jasonwebtoken
+yarn add @types/jasonwebtoken -D
+```
+
+#### Adicionar uma nova coluna na tabela
+
+``` bash
+yarn typeorm migration:create -n AlterUserAddPassword
+# ... faz as alterações no arquivo que foi gerado e roda a migration ...
+yarn typeorm migration:run
+```
+
+#### Criptografar senhas
+``` bash
+yarn add bcryptjs
+yarn add @types/bcryptjs -D
+```
+
+
