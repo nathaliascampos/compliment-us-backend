@@ -56,9 +56,7 @@ yarn dev
 
 ---
 
-#### Instalar typeorm  
-
-https://typeorm.io/
+#### Instalar [typeorm](https://typeorm.io/)  
 
 ``` bash 
 yarn add typeorm reflect-metadata sqlite3
@@ -73,58 +71,41 @@ Colocar no script dentro do package.json:
 }
 ```
 
-Para criar a pasta `migrations`: 
+#### Para criar a pasta `migrations`: 
 
 ``` bash 
 yarn typeorm migration:create -n CreateUsers
-```
-
-Cria a tabela (visualizar no Beekeeper)
-
-``` bash
+# Modifica o script gerado e roda para criar a tabela (visualizar no Beekeeper): 
 yarn typeorm migration:run 
+# Se precisar voltar para a última `migration`: 
+# yarn typeorm migration:revert 
 ```
 
-Se precisar voltar para a última `migration`: 
-
-``` bash
-yarn typeorm migration:revert 
-```
-
-Criar a estrutura de `entities`
+#### Criar a estrutura de `entities`
 
 ``` bash 
 yarn typeorm entity:create -n User
 ```
 
-Para criar ID automaticamente
+#### Para criar ID automaticamente
 
 ``` bash 
 yarn add uuid 
-```
-
-``` bash 
 yarn add @types/uuid -D
-```  
+```
 
 ---
 
-Usar async no express
+#### Usar async no express
 
 ``` bash 
 yarn add express-async-errors
 ```  
 
----
-
 #### Criar tags: 
 ``` bash 
 yarn typeorm migration:create -n CreateTags
-``` 
-
-Rodar a migration
-
-``` bash 
+# Rodar a migration...
 yarn typeorm migration:run
 ``` 
 
@@ -139,7 +120,7 @@ yarn add @types/jasonwebtoken -D
 
 ``` bash
 yarn typeorm migration:create -n AlterUserAddPassword
-# ... faz as alterações no arquivo que foi gerado e roda a migration ...
+# faz as alterações no arquivo que foi gerado e roda a migration...
 yarn typeorm migration:run
 ```
 
