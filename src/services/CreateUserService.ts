@@ -5,7 +5,7 @@ import { hash } from "bcryptjs"
 interface IUserRequest {
     name: string;
     email: string;
-    admin?: boolean,
+    admin?: boolean;
     password: string
 }
 
@@ -13,10 +13,14 @@ class CreateUserService {
     async execute({ name, email, admin, password }: IUserRequest) {
         const usersRepository = getCustomRepository(UsersRepositories);
 
+        // Verificar se existe email 
+        // * Não é permitido cadastrar usuário sem e-mail
         if (!email) {
             throw new Error("Email incorrect")
         }
 
+        // Verifica se email já existe
+        // * Não é permitido cadastrar mais de um usuário com o mesmo e-mail)=
         const userAlreadyExists = await usersRepository.findOne({
             email,
         })
@@ -25,6 +29,7 @@ class CreateUserService {
             throw new Error("User already exists")
         }
 
+        // Cria hash para a senha
         // salt -> 8
         const passwordHash = await hash(password, 8)
 
