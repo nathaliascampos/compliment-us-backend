@@ -3,6 +3,11 @@ import { Request, Response, NextFunction } from "express";
 // Verifica se user é admin
 export function ensureAdmin(request: Request, response: Response, next: NextFunction) {
 
+    const { user_id } = request
+
+    console.log(user_id)
+
+    // Verificar se user é admin
     const isAdmin = false;
 
     if (isAdmin) {
