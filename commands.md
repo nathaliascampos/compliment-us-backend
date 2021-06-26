@@ -130,4 +130,9 @@ yarn add bcryptjs
 yarn add @types/bcryptjs -D
 ```
 
-
+#### Cria tabela de elogios
+``` bash
+yarn typeorm migration:create -n CreateCompliments
+# Cria tabela e roda migration 
+yarn typeorm migration:run 
+```
