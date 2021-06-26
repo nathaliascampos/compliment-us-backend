@@ -112,8 +112,8 @@ yarn typeorm migration:run
 #### Instalar JWT 
 
 ``` bash
-yarn add jasonwebtoken
-yarn add @types/jasonwebtoken -D
+yarn add jsonwebtoken
+yarn add @types/jsonwebtoken -D
 ```
 
 #### Adicionar uma nova coluna na tabela
