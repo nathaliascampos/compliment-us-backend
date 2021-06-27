@@ -24,3 +24,6 @@
 
   [ ] O usuário precisa estar autenticado na aplicação
   
+---
+
+![](together.png)
