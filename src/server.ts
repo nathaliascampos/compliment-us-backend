@@ -1,12 +1,18 @@
-import "reflect-metadata";
 import express, { Request, Response, NextFunction } from 'express';
+
+import "reflect-metadata";
 import "express-async-errors";
+
+import cors from "cors";
 
 import { router } from "./routes";
 
 import "./database";
 
 const app = express();
+
+// Habilitar que outras fontes -sem ser backend- possam acessar a aplicação 
+app.use(cors());
 
 // para usar o json no body é preciso inserir essa linha
 app.use(express.json());

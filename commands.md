@@ -137,7 +137,15 @@ yarn typeorm migration:create -n CreateCompliments
 yarn typeorm migration:run 
 ```
 
-### Transformar colunas 
+#### Transformar colunas 
 ``` bash
 yarn add class-transformer
+```
+
+---
+
+#### Habilitar que outras fontes -sem ser backend- possam acessar a aplicação 
+``` bash
+yarn add cors 
+yarn add @types/cors -D
 ```
