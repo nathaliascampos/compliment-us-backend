@@ -136,3 +136,8 @@ yarn typeorm migration:create -n CreateCompliments
 # Cria tabela e roda migration 
 yarn typeorm migration:run 
 ```
+
+### Transformar colunas 
+``` bash
+yarn add class-transformer
+```

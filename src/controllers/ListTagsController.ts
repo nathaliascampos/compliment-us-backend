@@ -7,10 +7,7 @@ class ListTagsController {
 
         const tags = await listTagsService.execute()
 
-        // Criando name custom...
-        // tags = tags.map(tag => ({ ...tag, nameCustom: `#${tag.name}` }))
-
-        return response.json(tags)
+        return response.json(tags);
     }
 }
 
