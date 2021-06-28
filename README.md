@@ -26,4 +26,4 @@
   
 ---
 
-![](together.png)
+![](doc/together.png)
